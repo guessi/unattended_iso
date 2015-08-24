@@ -1,0 +1,69 @@
+#!/bin/sh
+
+set +e
+
+# avoid doubled cleanup
+[ -f /tmp/cleanup.lock ] && exit 0
+
+# cleanup logical volumes
+for lv in $(lvscan | grep "ACTIVE" | cut -d"'" -f2); do
+  lvremove -v -f "${lv}" || true
+done
+
+# cleanup volume groups
+for vg in $(vgscan | grep "Found" | cut -d'"' -f2); do
+  vgremove -v -f "${vg}" || true
+done
+
+# cleanup physical volumes
+for pv in $(pvscan -s | grep "dev" | sed -e 's/^ *//g'); do
+  pvremove -ff -y -v "${pv}" || true
+done
+
+# cleanup mulit-disk raids
+if [ -f /proc/mdstat ]; then
+  grep 'active' /proc/mdstat | cut -d' ' -f1 | while IFS= read -r md; do
+    mdadm --manage --stop "/dev/${md}" || true
+    sleep 1
+
+    mdadm --manage --remove "/dev/${md}" || true
+    sleep 1
+  done
+fi
+
+# tools for cleanup disks
+anna-install dmraid-udeb
+anna-install fdisk-udeb
+anna-install parted-udeb
+
+# find existing disk drive labels
+devs=$(
+  find /dev/disk/by-id/ata* | grep -v part | grep -v DVD | while IFS= read -r dev; do
+    basename "$(readlink "${dev}")"
+  done
+)
+
+for dev in ${devs}; do
+  # cleanup md superblock if any
+  for part in /dev/${dev}*; do
+    mdadm --zero-superblock --force -v "${part}" || true
+    sleep 1
+  done
+
+  # cleanup metadata of raid devices
+  dmraid -E -r "/dev/${dev}" || true
+  sleep 1
+
+  # cleanup partition tables
+  printf "o\nw\n" | fdisk -c "/dev/${dev}" || true
+  sleep 1
+done
+
+for dev in ${devs}; do
+  # cleanup gpt signatures
+  parted -s -- "/dev/${dev}" mklabel msdos || true
+  sleep 1
+done
+
+# create lock file for preventing doubled cleanup
+touch /tmp/cleanup.lock
