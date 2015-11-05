@@ -59,6 +59,9 @@ mount -o loop "${ISO}" "${SOURCE_DIR}" >/dev/null 2>&1 || exit 1
   popd >/dev/null 2>&1
 umount "${SOURCE_DIR}" || exit 1
 
+# bypass language selection menu
+echo "en" > "${OUTPUT_DIR}/isolinux/lang"
+
 # copy customized configure files to target directory
 echo "* configure setup files"
 cp -f "${DIR}/conf/preseed/ubuntu-server-raid1" \
