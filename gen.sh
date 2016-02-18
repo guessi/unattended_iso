@@ -32,11 +32,23 @@ case "${FILENAME}" in
   ubuntu-12.04.5-server-amd64.iso)
     LABEL="Ubuntu-Server 12.04.5 LTS amd64"
     ;;
+  precise-server-amd64.iso)
+    LABEL="Ubuntu-Server 12.04 Daily amd64"
+    ;;
   ubuntu-14.04.2-server-amd64.iso)
     LABEL="Ubuntu-Server 14.04.2 LTS amd64"
     ;;
   ubuntu-14.04.3-server-amd64.iso)
     LABEL="Ubuntu-Server 14.04.3 LTS amd64"
+    ;;
+  trusty-server-amd64.iso)
+    LABEL="Ubuntu-Server 14.04 Daily amd64"
+    ;;
+  ubuntu-16.04-server-amd64.iso)
+    LABEL="Ubuntu-Server 16.04 LTS amd64"
+    ;;
+  xenial-server-amd64.iso)
+    LABEL="Ubuntu-Server 16.04 Daily amd64"
     ;;
   *)
     echo "sorry, not supported, exited"

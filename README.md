@@ -1,9 +1,9 @@
 # Unattended ISO
 
-a simple script for creating unattended iso file for Ubuntu Server 12.04/14.04 LTS
+a simple script for creating unattended iso file for Ubuntu Server LTS
 
 
-### Why drop suuport for some version, 12.04.x and 14.04.x?
+### Why drop suuport for some version?
 
 * 12.04, 12.04.1, 12.04.2: they're consider to be too old
 * 14.04, 14.04.1: a known issue about partition [LP#1265192](https://bugs.launchpad.net/bugs/1265192)
@@ -33,3 +33,4 @@ a simple script for creating unattended iso file for Ubuntu Server 12.04/14.04 L
 
 * https://help.ubuntu.com/12.04/installation-guide/example-preseed.txt
 * https://help.ubuntu.com/14.04/installation-guide/example-preseed.txt
+* https://help.ubuntu.com/16.04/installation-guide/example-preseed.txt
