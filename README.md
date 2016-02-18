@@ -12,7 +12,7 @@ a simple script for creating unattended iso file for Ubuntu Server LTS
 ### Usage
 
     $ chmod +x gen.sh
-    $ sudo ./gen.sh ubuntu-14.04.3-server-amd64.iso
+    $ sudo ./gen.sh <iso>
 
 
 ### FAQ
@@ -21,12 +21,12 @@ a simple script for creating unattended iso file for Ubuntu Server LTS
 
 * if you want to change default user name and password, change the following lines in preseed files:
 
-    d-i passwd/username string ubuntu
-    d-i passwd/user-password-crypted password XXXX
+    d-i passwd/username string <plaintext-username>
+    d-i passwd/user-password-crypted password <encrypted-password>
 
 * if you want to change disk partitioning layout, change the following section in preseed files:
 
-    d-i partman-auto/expert_recipe XXXX
+    d-i partman-auto/expert_recipe <recipe>
 
 
 ### Reference
