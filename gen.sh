@@ -41,6 +41,9 @@ case "${FILENAME}" in
   ubuntu-14.04.3-server-amd64.iso)
     LABEL="Ubuntu-Server 14.04.3 LTS amd64"
     ;;
+  ubuntu-14.04.4-server-amd64.iso)
+    LABEL="Ubuntu-Server 14.04.4 LTS amd64"
+    ;;
   trusty-server-amd64.iso)
     LABEL="Ubuntu-Server 14.04 Daily amd64"
     ;;
@@ -85,7 +88,7 @@ cp -f "${DIR}/conf/install/cleanup" \
 cp -f "${DIR}/conf/isolinux/txt.cfg" \
     "${OUTPUT_DIR}/isolinux/txt.cfg"
 
-# ubuntu-14.04.3-server-amd64-XXXXXX.iso
+# ubuntu-XXXXXX.iso
 OUTPUT_FILE="$(basename -s ".iso" ${ISO})-$(date +%H%M%S).iso"
 INPUT_DIR="output"
 
