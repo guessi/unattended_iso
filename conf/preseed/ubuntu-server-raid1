@@ -45,8 +45,12 @@ d-i partman-lvm/device_remove_lvm_span boolean true
 d-i partman-lvm/confirm boolean true
 d-i partman-lvm/confirm_nooverwrite boolean true
 
+# Temporary workaround for LP#1347726:
+#   Need to umount /media mount point before partman involve
+# https://bugs.launchpad.net/ubuntu/+source/debian-installer/+bug/1347726
 d-i partman/early_command string \
     sh /cdrom/install/cleanup && \
+    (grep "/media" /proc/mounts && umount /media); sleep 3 && \
     debconf-set partman-auto/disk "$(list-devices disk | sort | head -n1) $(list-devices disk | sort | head -n2 | tail -n1)"
 
 # Know issue:
