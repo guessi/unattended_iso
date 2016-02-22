@@ -69,7 +69,6 @@ mount -o loop "${ISO}" "${SOURCE_DIR}" >/dev/null 2>&1 || exit 1
   pushd "${SOURCE_DIR}" >/dev/null 2>&1
     cp -a ./* "${OUTPUT_DIR}"
     cp -a ./.disk "${OUTPUT_DIR}"
-    echo "en" > "${OUTPUT_DIR}/isolinux/lang"
     sync
   popd >/dev/null 2>&1
 umount "${SOURCE_DIR}" || exit 1
