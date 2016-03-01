@@ -31,6 +31,4 @@ a simple script for creating unattended iso file for Ubuntu Server LTS
 
 ### Reference
 
-* https://help.ubuntu.com/12.04/installation-guide/example-preseed.txt
-* https://help.ubuntu.com/14.04/installation-guide/example-preseed.txt
-* https://help.ubuntu.com/16.04/installation-guide/example-preseed.txt
+* https://help.ubuntu.com/lts/installation-guide/example-preseed.txt
