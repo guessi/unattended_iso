@@ -23,23 +23,11 @@ fi
 FILENAME="$(basename "${ISO}")"
 echo "* input filename: ${FILENAME}"
 case "${FILENAME}" in
-  ubuntu-12.04.3-server-amd64.iso)
-    LABEL="Ubuntu-Server 12.04.3 LTS amd64"
-    ;;
-  ubuntu-12.04.4-server-amd64.iso)
-    LABEL="Ubuntu-Server 12.04.4 LTS amd64"
-    ;;
   ubuntu-12.04.5-server-amd64.iso)
     LABEL="Ubuntu-Server 12.04.5 LTS amd64"
     ;;
   precise-server-amd64.iso)
     LABEL="Ubuntu-Server 12.04 Daily amd64"
-    ;;
-  ubuntu-14.04.2-server-amd64.iso)
-    LABEL="Ubuntu-Server 14.04.2 LTS amd64"
-    ;;
-  ubuntu-14.04.3-server-amd64.iso)
-    LABEL="Ubuntu-Server 14.04.3 LTS amd64"
     ;;
   ubuntu-14.04.4-server-amd64.iso)
     LABEL="Ubuntu-Server 14.04.4 LTS amd64"
