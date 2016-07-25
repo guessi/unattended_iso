@@ -50,6 +50,9 @@ case "${FILENAME}" in
   ubuntu-16.04-server-amd64.iso)
     LABEL="Ubuntu-Server 16.04 LTS amd64"
     ;;
+  ubuntu-16.04.1-server-amd64.iso)
+    LABEL="Ubuntu-Server 16.04.1 LTS amd64"
+    ;;
   xenial-server-amd64.iso)
     LABEL="Ubuntu-Server 16.04 Daily amd64"
     ;;
