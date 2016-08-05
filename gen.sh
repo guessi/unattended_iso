@@ -29,17 +29,11 @@ case "${FILENAME}" in
   precise-server-amd64.iso)
     LABEL="Ubuntu-Server 12.04 Daily amd64"
     ;;
-  ubuntu-14.04.4-server-amd64.iso)
-    LABEL="Ubuntu-Server 14.04.4 LTS amd64"
-    ;;
   ubuntu-14.04.5-server-amd64.iso)
     LABEL="Ubuntu-Server 14.04.5 LTS amd64"
     ;;
   trusty-server-amd64.iso)
     LABEL="Ubuntu-Server 14.04 Daily amd64"
-    ;;
-  ubuntu-16.04-server-amd64.iso)
-    LABEL="Ubuntu-Server 16.04 LTS amd64"
     ;;
   ubuntu-16.04.1-server-amd64.iso)
     LABEL="Ubuntu-Server 16.04.1 LTS amd64"

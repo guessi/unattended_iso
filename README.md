@@ -6,7 +6,8 @@ a simple script for creating unattended iso file for Ubuntu Server LTS
 ### Why drop suuport for some version?
 
 * 12.04 ~ 12.04.4: relatively old releases
-* 14.04 ~ 14.04.3: relatively old releases
+* 14.04 ~ 14.04.4: relatively old releases
+* 16.04: relatively old releases
 * partitioning issue for 14.04, 14.04.1, see [LP#1265192](https://bugs.launchpad.net/bugs/1265192)
 
 
