@@ -97,10 +97,9 @@ fi
 
 # ask user whether to delete temp folder or not
 echo "* all done"
-read -p "remove temporary folders? [y/N] " YESNO
-if [ "${YESNO}" = "y" ] || [ "${YESNO}" = "yes" ]; then
-  rm -rf "${SOURCE_DIR}" "${OUTPUT_DIR}"
-fi
+
+# remove temporary directories
+rm -rf "${SOURCE_DIR}" "${OUTPUT_DIR}"
 
 # normally exit
 exit 0
