@@ -3,12 +3,18 @@
 a simple script for creating unattended iso file for Ubuntu Server LTS
 
 
-### Why drop suuport for some version?
+### Supported versions
 
-* 12.04 ~ 12.04.4: relatively old releases
-* 14.04 ~ 14.04.4: relatively old releases
-* 16.04: relatively old releases
-* partitioning issue for 14.04, 14.04.1, see [LP#1265192](https://bugs.launchpad.net/bugs/1265192)
+
+| Distro Version            | Input Filename                  |
+|---------------------------|---------------------------------|
+| Ubuntu Server 12.04.5 LTS | ubuntu-12.04.5-server-amd64.iso |
+| Ubuntu Server 14.04.5 LTS | ubuntu-14.04.5-server-amd64.iso |
+| Ubuntu Server 16.04.1 LTS | ubuntu-16.04.1-server-amd64.iso |
+| Ubuntu Server 16.04.2 LTS | ubuntu-16.04.2-server-amd64.iso |
+| Ubuntu Server 12.04 Daily | precise-server-amd64.iso        |
+| Ubuntu Server 14.04 Daily | trusty-server-amd64.iso         |
+| Ubuntu Server 16.04 Daily | xenial-server-amd64.iso         |
 
 
 ### Usage
@@ -29,6 +35,11 @@ a simple script for creating unattended iso file for Ubuntu Server LTS
 * if you want to change disk partitioning layout, change the following section in preseed files:
 
     d-i partman-auto/expert_recipe <recipe>
+
+
+* why drop suuport for some version?
+
+    it is more secure and safe to follow up upstream changes, and some of them have disk partitioning issue, see [LP#1265192](https://bugs.launchpad.net/bugs/1265192)
 
 
 ### Reference
