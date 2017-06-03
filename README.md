@@ -5,14 +5,13 @@ a simple script for creating unattended iso file for Ubuntu Server LTS
 
 ### Supported versions
 
-
-| Distro Version            | Input Filename                  |
-|---------------------------|---------------------------------|
-| Ubuntu Server 12.04.5 LTS | ubuntu-12.04.5-server-amd64.iso |
-| Ubuntu Server 14.04.5 LTS | ubuntu-14.04.5-server-amd64.iso |
-| Ubuntu Server 16.04.1 LTS | ubuntu-16.04.1-server-amd64.iso |
-| Ubuntu Server 16.04.2 LTS | ubuntu-16.04.2-server-amd64.iso |
-| Ubuntu Server 16.04 Daily | xenial-server-amd64.iso         |
+| Distro Version            | Input Filename                  | Remark   |
+|---------------------------|---------------------------------|----------|
+| Ubuntu Server 12.04.5 LTS | ubuntu-12.04.5-server-amd64.iso | EOL      |
+| Ubuntu Server 14.04.5 LTS | ubuntu-14.04.5-server-amd64.iso |          |
+| Ubuntu Server 16.04.1 LTS | ubuntu-16.04.1-server-amd64.iso |          |
+| Ubuntu Server 16.04.2 LTS | ubuntu-16.04.2-server-amd64.iso |          |
+| Ubuntu Server 16.04 Daily | xenial-server-amd64.iso         | Unstable |
 
 
 ### Usage
