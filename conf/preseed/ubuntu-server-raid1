@@ -114,7 +114,7 @@ tasksel tasksel/first multiselect ubuntu-server
 d-i pkgsel/upgrade select none
 d-i pkgsel/update-policy select none
 
-d-i pkgsel/include string openssh-server vim acpid ntp ifenslave vlan bridge-utils
+d-i pkgsel/include string openssh-server acpid ntp ifenslave vlan bridge-utils
 
 # bootloader
 d-i grub-installer/skip boolean false
