@@ -16,26 +16,12 @@ a simple script for creating unattended iso file for Ubuntu Server LTS
 
     $ ./gen.sh <iso>
 
-
+ 
 ### FAQ
 
-* default user name/password is: ubuntu/ubuntu
-
-* if you want to change default user name and password, change the following lines in preseed files:
-
-    d-i passwd/username string <plaintext-username>
-    d-i passwd/user-password-crypted password <encrypted-password>
-
-* if you want to change disk partitioning layout, change the following section in preseed files:
-
-    d-i partman-auto/expert_recipe <recipe>
-
-
-* why drop suuport for some version?
-
-    it is more secure and safe to follow up upstream changes, and some of them have disk partitioning issue, see [LP#1265192](https://bugs.launchpad.net/bugs/1265192)
+see [FAQ](FAQ.md)
 
 
 ### Reference
 
-* https://help.ubuntu.com/lts/installation-guide/example-preseed.txt
+* [Example Preseed](https://help.ubuntu.com/lts/installation-guide/example-preseed.txt)
