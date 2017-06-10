@@ -12,11 +12,9 @@ a simple script for creating unattended iso file for Ubuntu Server LTS
 | Ubuntu Server 16.04.1 LTS | ubuntu-16.04.1-server-amd64.iso |          |
 | Ubuntu Server 16.04.2 LTS | ubuntu-16.04.2-server-amd64.iso |          |
 
-
 ### Usage
 
-    $ chmod +x gen.sh
-    $ sudo ./gen.sh <iso>
+    $ ./gen.sh <iso>
 
 
 ### FAQ
