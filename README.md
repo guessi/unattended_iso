@@ -17,7 +17,7 @@ a simple script for creating unattended iso file for Ubuntu Server LTS
 
     $ ./gen.sh <iso>
 
- 
+
 ### FAQ
 
 see [FAQ](FAQ.md)
