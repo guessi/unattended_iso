@@ -8,11 +8,11 @@ a simple script for creating unattended iso file for Ubuntu Server LTS
 | Distro Version            | Input Filename                  | Remark   |
 |---------------------------|---------------------------------|----------|
 | Ubuntu Server 12.04.5 LTS | ubuntu-12.04.5-server-amd64.iso | EOL      |
-| Ubuntu Server 14.04.5 LTS | ubuntu-14.04.5-server-amd64.iso |          |
+| Ubuntu Server 14.04.5 LTS | ubuntu-14.04.5-server-amd64.iso | EOL      |
 | Ubuntu Server 16.04.1 LTS | ubuntu-16.04.1-server-amd64.iso |          |
 | Ubuntu Server 16.04.2 LTS | ubuntu-16.04.2-server-amd64.iso | EOL      |
-| Ubuntu Server 16.04.3 LTS | ubuntu-16.04.3-server-amd64.iso |          |
-| Ubuntu Server 16.04.4 LTS | ubuntu-16.04.4-server-amd64.iso |          |
+| Ubuntu Server 16.04.3 LTS | ubuntu-16.04.3-server-amd64.iso | EOL      |
+| Ubuntu Server 16.04.4 LTS | ubuntu-16.04.4-server-amd64.iso | EOL      |
 | Ubuntu Server 16.04.5 LTS | ubuntu-16.04.5-server-amd64.iso |          |
 
 ### Usage
